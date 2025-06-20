@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+      <span class="navbar-brand">CS2 Case Simulator</span>
+      <span class="navbar-text">Geld: {{balance}}€</span>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-8">
+      <app-case-list (caseSelected)="onCaseSelected($event)"></app-case-list>
+    </div>
+    <div class="col-md-4">
+      <app-inventory></app-inventory>
+    </div>
+  </div>
+</div>
+
+<app-case-opening
+  [selectedCase]="selectedCase"
+  (caseOpened)="onCaseOpened()"
+  (modalClosed)="onModalClosed()">
+</app-case-opening>

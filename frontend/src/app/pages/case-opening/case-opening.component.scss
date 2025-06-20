@@ -1,0 +1,35 @@
+.modal.show {
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.opening-animation {
+  padding: 2rem 0;
+}
+
+.result-display {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.case-preview img {
+  transition: transform 0.3s ease;
+}
+
+.case-preview img:hover {
+  transform: scale(1.05);
+}
