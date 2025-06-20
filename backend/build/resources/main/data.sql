@@ -1,0 +1,63 @@
+INSERT INTO items (name, rarity, value, image_url)
+VALUES ('AK-47 | Redline', 'SELTEN', 45.50,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEmyUJ6Ccmizuir47zpPmkrh'),
+       ('AWP | Dragon Lore', 'LEGENDÄR', 3250.00,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PLfYQJD_9W7m5SKhfDLPr7Vn35cpp'),
+       ('M4A4 | Howl', 'LEGENDÄR', 1850.00,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITZkGRD4c'),
+       ('Karambit | Fade', 'LEGENDÄR', 950.00,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlZG0kfbwNoTdl3lU'),
+       ('Glock-18 | Water Elemental', 'EPISCH', 12.75,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJmIGZnPLLD7'),
+       ('P250 | Asiimov', 'EPISCH', 25.80,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhh3szcdD4T09-kjZOFkuXLP7'),
+       ('USP-S | Kill Confirmed', 'SELTEN', 85.60,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq4yCkP_gfe');
+
+INSERT INTO items (name, rarity, value, image_url)
+VALUES ('MAC-10 | Neon Rider', 'GEWÖHNLICH', 3.25,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf2-r3fi5L7c6ykb-GluL1IL'),
+       ('Five-SeveN | Case Hardened', 'GEWÖHNLICH', 4.80,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLOzLhRlxfbGTjxD_tOJmImMn-O6Nb'),
+       ('Tec-9 | Isaac', 'GEWÖHNLICH', 2.15,
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhjxszcdD4T08-3moS0mvLwOq7c');
+
+INSERT INTO cases (name, image_url)
+VALUES ('Chroma Case',
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV090_hIWZlfL7PYTZkWdE'),
+       ('Spectrum Case',
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA5ApeO4YmlhxYQknCRvCo04DEVlxkKgpo2-ufFAR17PLJTitD_tiJgYyCk'),
+       ('Operation Hydra Case',
+        'https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA5ApeO4YmlhxYQknCRvCo04DEVlxkKgpo2-ufFAR17PLJTitD_t');
+
+INSERT INTO case_items (case_id, item_id)
+VALUES (1, 1),
+       (1, 2),
+       (1, 3),
+       (1, 4),
+       (1, 5),
+       (1, 6),
+       (1, 7),
+       (1, 8),
+       (1, 9),
+       (1, 10),
+       (2, 1),
+       (2, 2),
+       (2, 3),
+       (2, 4),
+       (2, 5),
+       (2, 6),
+       (2, 7),
+       (2, 8),
+       (2, 9),
+       (2, 10),
+       (3, 1),
+       (3, 2),
+       (3, 3),
+       (3, 4),
+       (3, 5),
+       (3, 6),
+       (3, 7),
+       (3, 8),
+       (3, 9),
+       (3, 10);
