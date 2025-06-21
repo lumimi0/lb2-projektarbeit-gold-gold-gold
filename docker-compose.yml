@@ -1,0 +1,58 @@
+services:
+  database:
+    image: postgres:15-alpine
+    container_name: csgo-db
+    environment:
+      POSTGRES_DB: csgo_simulator
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - csgo-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d csgo_simulator"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: csgo-backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/csgo_simulator
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - csgo-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: csgo-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - csgo-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  csgo-network:
+    driver: bridge

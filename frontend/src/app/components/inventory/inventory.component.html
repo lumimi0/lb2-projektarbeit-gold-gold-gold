@@ -1,0 +1,41 @@
+<div class="inventory-container">
+  <h1>Mein Inventory</h1>
+
+  <div *ngIf="loading" class="loading">
+    <p>Loading inventory...</p>
+  </div>
+
+  <div *ngIf="!loading" class="inventory-summary">
+    <div class="summary-card">
+      <h3>Gesamtwert</h3>
+      <p class="total-value">CHF {{ inventoryValue.totalValue }}</p>
+    </div>
+    <div class="summary-card">
+      <h3>Anzahl Items</h3>
+      <p class="item-count">{{ inventoryValue.itemCount }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && inventoryItems.length === 0" class="empty-inventory">
+    <h2>Dein Inventory ist leer</h2>
+    <p>Öffne einige Cases um Items zu erhalten!</p>
+    <a routerLink="/cases" class="btn">Zu den Cases</a>
+  </div>
+
+  <div *ngIf="!loading && inventoryItems.length > 0" class="inventory-grid">
+    <div
+      *ngFor="let item of inventoryItems"
+      class="inventory-item-card"
+      [ngClass]="getRarityClass(item.rarity)">
+      <div class="item-image">
+        <img [src]="item.imageUrl" [alt]="item.itemName" onerror="this.src='https://via.placeholder.com/150x150?text=Item'">
+      </div>
+      <div class="item-details">
+        <h4>{{ item.itemName }}</h4>
+        <p class="rarity">{{ getRarityDisplayName(item.rarity) }}</p>
+        <p class="value">CHF {{ item.value }}</p>
+        <p class="obtained-date">Erhalten: {{ formatDate(item.obtainedAt) }}</p>
+      </div>
+    </div>
+  </div>
+</div>
