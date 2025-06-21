@@ -1,0 +1,49 @@
+<div class="case-opening-container">
+  <h1>CS:GO Case Opening</h1>
+
+  <div *ngIf="loading" class="loading">
+    <p>Loading cases...</p>
+  </div>
+
+  <div *ngIf="!loading" class="cases-grid">
+    <h2>Wähle eine Case:</h2>
+    <div class="cases-row">
+      <div
+        *ngFor="let case of cases"
+        class="case-card"
+        [class.selected]="selectedCase?.id === case.id"
+        (click)="selectCase(case)">
+        <img [src]="case.imageUrl" [alt]="case.name" onerror="this.src='https://via.placeholder.com/150x150?text=Case'">
+        <h3>{{ case.name }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedCase" class="selected-case-section">
+    <h2>Ausgewählte Case: {{ selectedCase.name }}</h2>
+    <button
+      class="btn open-btn"
+      [disabled]="isOpening"
+      (click)="openCase()">
+      <span *ngIf="!isOpening">Case Öffnen</span>
+      <span *ngIf="isOpening">Öffne...</span>
+    </button>
+  </div>
+
+  <div *ngIf="isOpening" class="opening-animation">
+    <div class="opening-spinner"></div>
+    <p>Case wird geöffnet...</p>
+  </div>
+
+  <div *ngIf="lastOpenedItem && !isOpening" class="result-section fade-in">
+    <h2>Du hast erhalten:</h2>
+    <div class="item-result" [ngClass]="getRarityClass(lastOpenedItem.rarity)">
+      <img [src]="lastOpenedItem.imageUrl" [alt]="lastOpenedItem.itemName" onerror="this.src='https://via.placeholder.com/200x150?text=Item'">
+      <div class="item-info">
+        <h3>{{ lastOpenedItem.itemName }}</h3>
+        <p class="rarity">{{ getRarityDisplayName(lastOpenedItem.rarity) }}</p>
+        <p class="value">CHF {{ lastOpenedItem.value }}</p>
+      </div>
+    </div>
+  </div>
+</div>
